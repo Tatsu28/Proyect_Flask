@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Registrar Cartera</title>
+    <link rel="stylesheet" href="/static/stilos.css">
+</head>
+<body>
+    <div class="contenedor">
+        <h2>Registrar Nueva Cartera</h2>
+        <form action="/GrabarCartera" method="POST">
+            <table class="formulario">
+                <tr>
+                    <td><label>Nombre de Cartera:</label></td>
+                    <td><input type="text" name="descripcion" required></td>
+                </tr>
+                <tr>
+                    <td><label>Tipo de Cartera:</label></td>
+                    <td>
+                        <select name="tipo" required>
+                            <option value="0">------</option>
+                            <option value="1">Andino</option>
+                            <option value="2">Tradicional</option>
+                            <option value="3">Selvático</option>
+                            <option value="4">Costeño</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td><label>Precio:</label></td>
+                    <td><input type="text" name="precio" required></td>
+                </tr>
+                <tr>
+                    <td><label>Fecha de Registro:</label></td>
+                    <td><input type="date" name="fecha" required></td>
+                </tr>
+            </table>
+            <div class="botones">
+                <button type="submit">Grabar</button>
+                <a href="/ConsultarCartera" class="btn-consultar">Consultar</a>
+            </div>
+        </form>
+
+        {% if mensaje %}
+            <p class="mensaje">{{ mensaje }}</p>
+        {% endif %}
+    </div>
+</body>
+</html>

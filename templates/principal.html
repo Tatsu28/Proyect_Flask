@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Menú Principal</title>
+    <link rel="stylesheet" href="/static/stilos.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        .contenedor {
+            width: 300px;
+            margin: 100px auto;
+            text-align: center;
+        }
+
+        .menu {
+            position: relative;
+            display: inline-block;
+        }
+
+        .menu-btn {
+            background-color: #007bff;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        .submenu {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background-color: white;
+            border: 1px solid #ccc;
+            min-width: 200px;
+            z-index: 1;
+        }
+
+        .submenu a {
+            display: block;
+            padding: 10px;
+            text-decoration: none;
+            color: #333;
+        }
+
+        .submenu a:hover {
+            background-color: #f0f0f0;
+        }
+
+        .menu:hover .submenu {
+            display: block;
+        }
+
+        .btn-regresar {
+            display: inline-block;
+            margin-top: 20px;
+            background-color: #dc3545;
+            color: white;
+            padding: 10px 15px;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+
+        .btn-regresar:hover {
+            background-color: #c82333;
+        }
+    </style>
+</head>
+<body>
+    <div class="contenedor">
+        <div class="menu">
+            <button class="menu-btn">Operaciones</button>
+            <div class="submenu">
+                <a href="/RegistrarCartera">Registrar Cartera</a>
+                <a href="/ConsultarCartera">Consultar Cartera</a>
+            </div>
+        </div>
+        <br>
+        <a href="/logout" class="btn-regresar">Cerrar Sesión</a>
+    </div>
+</body>
+</html>

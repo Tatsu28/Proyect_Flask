@@ -1,0 +1,139 @@
+body {
+    background-color: #f0f2f5;
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    text-align: center;
+}
+
+.contenedor {
+    background-color: white;
+    max-width: 600px;
+    margin: auto;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.1);
+    box-sizing: border-box;
+}
+
+h2 {
+    color: #333;
+    margin-bottom: 20px;
+}
+
+table.formulario {
+    width: 100%;
+    margin-bottom: 20px;
+    border-spacing: 10px;
+}
+
+table.formulario td {
+    padding: 6px 10px;
+    text-align: left;
+    vertical-align: middle;
+    width: 50%;
+}
+
+input[type="text"],
+input[type="date"],
+select {
+    width: 95%;
+    padding: 8px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+select {
+    appearance: none;
+    background-color: white;
+    background-image: url('data:image/svg+xml;charset=US-ASCII,<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="gray"><polygon points="0,0 12,0 6,6"/></svg>');
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    background-size: 12px;
+    padding-right: 30px;
+}
+
+.botones {
+    text-align: center;
+    margin-top: 10px;
+}
+
+button {
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    padding: 10px 18px;
+    margin: 5px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+.btn-consultar {
+    background-color: #28a745;
+    color: white;
+    padding: 10px 18px;
+    border-radius: 8px;
+    text-decoration: none;
+    margin-left: 10px;
+    display: inline-block;
+}
+
+.btn-consultar:hover {
+    background-color: #1e7e34;
+}
+
+.btn-espaciado {
+    margin-top: 40px;
+}
+
+.btn-regresar {
+    display: inline-block;
+    margin-top: 25px;
+    background-color: #6c757d;
+    color: white;
+    padding: 10px 18px;
+    border-radius: 8px;
+    text-decoration: none;
+}
+
+.btn-regresar:hover {
+    background-color: #5a6268;
+}
+
+.mensaje {
+    color: green;
+    font-weight: bold;
+    margin-top: 15px;
+}
+
+table.resultados {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+table.resultados th,
+table.resultados td {
+    border: 1px solid #ddd;
+    padding: 12px 16px;
+    text-align: center;
+}
+
+table.resultados th {
+    background-color: #28a745;
+    color: white;
+    font-weight: bold;
+}
+
+table.resultados tr:nth-child(even) {
+    background-color: #f0fff4;
+}
+
+table.resultados tr:hover {
+    background-color: #d4edda;
+}

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Consultar Cartera</title>
+    <link rel="stylesheet" href="/static/stilos.css">
+</head>
+<body>
+    <div class="contenedor">
+        <h2>Consultar Carteras por Tipo</h2>
+
+        <form action="/BuscarCartera" method="POST">
+            <label for="tipo">Tipo de Cartera:</label>
+            <select name="tipo" id="tipo" required>
+                <option value="">-- Seleccione --</option>
+                {% for tipo in tipos %}
+                    <option value="{{ tipo[0] }}">{{ tipo[1] }}</option>
+                {% endfor %}
+            </select>
+            <br>
+            <button type="submit" class="btn-consultar btn-espaciado">Consultar</button>
+        </form>
+
+        {% if resultados %}
+        <table class="resultados">
+            <tr>
+                <th>Nombre de la Cartera</th>
+                <th>Código</th>
+                <th>Fecha</th>
+                <th>Precio</th>
+            </tr>
+            {% for row in resultados %}
+            <tr>
+                <td>{{ row[0] }}</td>
+                <td>{{ row[1] }}</td>
+                <td>{{ row[2] }}</td>
+                <td>{{ row[3] }}</td>
+            </tr>
+            {% endfor %}
+        </table>
+        {% endif %}
+
+        <a href="/" class="btn-regresar">Regresar</a>
+    </div>
+</body>
+</html>
